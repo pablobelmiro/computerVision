@@ -29,4 +29,4 @@ print(image.getpixel((500, 300)))
 w, h = image.size #primeiro tem que pegar as dimensões da imagem
 grayImage = Image.new("RGB", (w, h))
 
-for x in range(w):
+#for x in range(w):
