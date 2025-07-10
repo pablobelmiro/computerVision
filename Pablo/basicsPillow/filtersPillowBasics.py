@@ -5,7 +5,7 @@ print(os.getcwd())
 
 #Ajustando diretório das imagens
 BASE_DIR = os.path.dirname(__file__)
-PATH = os.path.join(BASE_DIR, 'imgs')
+PATH = os.path.join(BASE_DIR, "..", 'imgs')
 
 #função só pra poder juntar o caminho com arquivo
 def in_file(file):
