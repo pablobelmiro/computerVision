@@ -39,4 +39,5 @@ image = Image.open(in_file('old_builds.jpg'))
 
 
 
+
 #ATIVIDADE - FAZER FILTRO BOX NA MÃO MANIPULANDO MATRIZES
