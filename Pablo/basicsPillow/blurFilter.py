@@ -1,5 +1,6 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 import os
+import numpy as np
 
 print(os.getcwd())
 
@@ -32,12 +33,18 @@ image = Image.open(in_file('old_builds.jpg'))
 #o deslocamento de centro são mais fáceis de manipular
 #no caso de bordas, alguma métrica precisa ser implementada, utilizando geralmente padding ou utilizando os valores mais próximos
 
+def show_vertical(image1, image2):
+    joinedImage = Image.fromarray(np.vstack(np.array(image1), np.array(image2)))
 
 #implementando utilizando pillow
 #utilizar os métodos ImageFilter -> modo BoxBlur
 #configurar o radius para configurar a "vizinhança" do pixel
+def show_box_blur(image, r=10):
+    filtered = image.filter(ImageFilter.BoxBlur(r))
 
+    return filtered
 
-
+filteredImage = show_box_blur(image,10)
+filteredImage.show()
 
 #ATIVIDADE - FAZER FILTRO BOX NA MÃO MANIPULANDO MATRIZES
