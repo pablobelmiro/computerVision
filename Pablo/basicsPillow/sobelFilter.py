@@ -12,7 +12,7 @@ def in_file(file):
     return os.path.join(PATH, file)
 
 image = Image.open(in_file('city_china.jpg'))
-#image.show()
+image.show()
 
 
 #FUNDAMENTOS FILTRO DE SOBEL:
